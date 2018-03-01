@@ -1,0 +1,216 @@
+.elementos {
+    box-sizing: border-box;
+    display: flex;
+    align-content: space-around;
+    margin: 50px auto;
+    flex-flow: column wrap;
+    background: $blanco;
+    @include if-desktop {
+        max-width: 80%;
+    }
+    @include if-mobile {
+        width: 100%;
+    }
+    .seccion1,
+    .seccion2,
+    .seccion3 {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        @include if-mobile {
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+    }
+    .seccion1 {
+        flex-wrap: wrap;
+        background: $blanco;
+        align-content: center;
+        justify-content: center;
+        .esta-semana {
+            order: 1;
+            display: flex;
+            flex-flow: column nowrap;
+            .solaris {
+                display: flex;
+                flex-flow: column wrap;
+                .pelicula {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    box-sizing: border-box;
+                    width: 100%;
+                    margin: 5px;
+                    background: rgb(153, 91, 68);
+                    overflow: hidden;
+                    @include if-mobile {
+                        margin: 0px;
+                    }
+                    .poster {
+                        position: absolute;
+                        clip: rect(50px, 90px, 100px, 0px);
+                    }
+                    .datos {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        text-align: end;
+                        bottom: 0;
+                        left: 0;
+                        .titulo {
+                            flex-direction: column;
+                        }
+                    }
+                }
+            }
+            .resto {
+                display: flex;
+                flex-flow: row nowrap;
+                .pelicula {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    box-sizing: border-box;
+                    width: 100%;
+                    margin: 5px;
+                    background: rgb(153, 91, 68);
+                    overflow: hidden;
+                    @include if-mobile {
+                        margin: 0px;
+                    }
+                }
+            }
+        }
+    }
+    .seccion2 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        background: linear-gradient($blanco, $gris);
+        .pelicula {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 5px;
+            background: rgb(153, 91, 68);
+            overflow: hidden;
+            @include if-mobile {
+                margin: 0px;
+            }
+            &.blade {
+                @include if-mobile {
+                    flex-direction: row-reverse;
+                }
+            }
+            .datos {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                margin-left: 0px;
+                padding: 5px;
+                width: 50%;
+                min-width: 50%;
+                height: 100%;
+                background: yellow;
+                @include if-mobile {
+                    margin: 5px;
+                }
+            }
+        }
+    }
+    .seccion3 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        background: $gris;
+        .pelicula {
+            width: calc(50% -10px);
+            .datos {
+                display: none;
+                flex-direction: column;
+                flex-wrap: wrap;
+                margin-left: 0px;
+                padding: 5px;
+                width: 50%;
+                min-width: 50%;
+                height: 100%;
+                @include if-mobile {
+                    margin: 5px;
+                }
+            }
+        }
+    }
+    .titulo_semana1,
+    .titulo_semana2,
+    .titulo_semana3 {
+        position: absolute;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: white;
+        text-align: center;
+        color: white;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-shadow: 0px 0px 30px red;
+        @include if-mobile {
+            position: absolute;
+            top: 5px;
+            left: 0;
+        }
+    }
+    .titulo_semana1 {
+        font-size: 50px;
+        height: 20%;
+    }
+    .titulo_semana2 {
+        font-size: 40px;
+        height: 17%;
+    }
+    .titulo_semana3 {
+        font-size: 30px;
+        height: 13%;
+    }
+    .esta-semana,
+    .prox-semana,
+    .proximamente {
+        margin: 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        @include if-mobile {
+            position: relative;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+    }
+    .poster {
+        height: auto;
+        width: 100%;
+    }
+    .titulo {
+        font-family: $font-logo;
+        color: $carbon;
+        font-size: 30px;
+    }
+    .director-any {
+        float: right;
+        text-align: start;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: grey;
+        font-size: 20px;
+    }
+    .genero {
+        float: right;
+        text-align: end;
+        font-size: 15px;
+    }
+    .fecha {
+        float: right;
+        text-align: end;
+        bottom: 0;
+        left: 0;
+    }
+}

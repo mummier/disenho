@@ -1,0 +1,129 @@
+nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    background-color: #333;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    @include if-mobile {
+        font-size: 20px;
+    }
+    @include if-tablet {
+        font-size: 15px;
+    }
+    @include if-desktop {
+        font-size: 15px;
+    }
+    ul {
+        list-style-type: none;
+        overflow: hidden;
+    }
+    li {
+        float: left;
+    }
+    li a,
+    .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    @include if-mobile {
+        .dropbtn {
+            width: 35px;
+            color: transparent;
+            box-sizing: border-box;
+            border: 0px;
+            border-radius: 2px;
+            font-size: 13px;
+            background-color: #333;
+            padding: 15px;
+            height: 20px;
+            transition: width 0.4s ease-in-out;
+            background-image: url('https://cdn.pixabay.com/photo/2017/11/07/07/06/menu-2925825_960_720.png');
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+        }
+    }
+    @include if-mobile-landscape {
+        .dropbtn {
+            width: 35px;
+            color: transparent;
+            box-sizing: border-box;
+            border: 0px;
+            border-radius: 2px;
+            font-size: 13px;
+            background-color: #333;
+            padding: 15px;
+            height: 20px;
+            transition: width 0.4s ease-in-out;
+            background-image: url('https://cdn.pixabay.com/photo/2017/11/07/07/06/menu-2925825_960_720.png');
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+        }
+    }
+    li p:hover,
+    .dropdown:hover .dropbtn {
+        background-color: red;
+    }
+    @include if-mobile {
+        li p:focus,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+
+            color: transparent;
+        }
+    }
+    li.dropdown {
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .search {
+        position: relative;
+        color: #aaa;
+        font-size: 16px;
+    }
+    input {
+        margin: 5px auto;
+        width: 35px;
+        box-sizing: border-box;
+        border: 0px;
+        border-radius: 2px;
+        font-size: 13px;
+        background-color: #333;
+        background-image: url('http://www.clker.com/cliparts/z/1/T/u/9/2/search-icon-hi.png');
+        background-size: 30px 30px;
+        background-repeat: no-repeat;
+        padding: 15px;
+        height: 20px;
+        transition: width 0.4s ease-in-out;
+    }
+    /*Cuando clicas y se expande*/
+    input:focus {
+        width: 300px;
+        border: 2px solid #ccc;
+        background-color: whitesmoke;
+    }
+}
