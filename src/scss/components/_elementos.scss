@@ -3,6 +3,7 @@
     display: flex;
     align-content: space-around;
     margin: auto;
+    padding-top: 7%;
     z-index: 0;
     flex-flow: column wrap;
     background: $blanco;
@@ -18,6 +19,8 @@
         display: flex;
         flex-direction: column;
         position: relative;
+        margin: 10px;
+        padding: 20px;
         @include if-mobile {
             flex-direction: column;
             flex-wrap: wrap;
@@ -28,6 +31,7 @@
         background: $blanco;
         align-content: center;
         justify-content: center;
+        bottom: 20px;
         .esta-semana {
             order: 1;
             display: flex;
