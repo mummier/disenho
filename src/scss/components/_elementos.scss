@@ -2,7 +2,8 @@
     box-sizing: border-box;
     display: flex;
     align-content: space-around;
-    margin: 50px auto;
+    margin: auto;
+    z-index: 0;
     flex-flow: column wrap;
     background: $blanco;
     @include if-desktop {
